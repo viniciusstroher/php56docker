@@ -1,2 +1,2 @@
-#!/bin/sh -eu
+#!/bin/bash
 httpd
