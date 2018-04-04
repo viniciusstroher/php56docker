@@ -18,6 +18,12 @@ RUN rpm -i --nosignature -Uvh https://dl.fedoraproject.org/pub/epel/epel-release
 
 VOLUME ["/var/www","/var/log"]
 
+EXPOSE 80
+
 COPY vhosts.conf /etc/httpd/conf.d/vhost.conf
 
-RUN /bin/httpd
+COPY startserver.sh /
+
+ENTRYPOINT ["/startserver.sh"]
+
+#WORKDIR /var/www
