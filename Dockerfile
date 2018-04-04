@@ -1,5 +1,5 @@
 
-FROM centos:7
+FROM centos:latest
 MAINTAINER "vinicius" <viniciusferreirawk@gmail.com>
 
 ##
