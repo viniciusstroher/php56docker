@@ -20,4 +20,4 @@ VOLUME ["/var/www","/var/log"]
 
 COPY vhosts.conf /etc/httpd/conf.d/vhost.conf
 
-RUN systemctl enable httpd.service
+RUN /bin/httpd
