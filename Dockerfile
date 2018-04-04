@@ -14,4 +14,10 @@ LABEL \
 
 RUN rpm -i --nosignature -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm && \
 	rpm -i --nosignature -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm && \
-	yum -y --nogpgcheck install httpd php56w php56w-cli php56w-common php56w-devel php56w-mbstring php56w-pecl-imagick php56w-xml php56w-mysql php56w-mysqlnd
+	yum -y --nogpgcheck install httpd php56w php56w-cli php56w-common php56w-devel php56w-mbstring php56w-pecl-imagick php56w-xml php56w-mysql
+
+VOLUME ["/var/www","/var/log"]
+
+COPY vhosts.conf /etc/httpd/conf.d/vhost.conf
+
+RUN systemctl enable httpd.service
