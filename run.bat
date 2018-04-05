@@ -3,5 +3,5 @@ docker run -d -i  ^
 	   --name php56docker ^
 	   -p 8000:80 ^
 	   -v /c/Users/veni/Desktop/docker/php56docker/www:/var/www/html ^
-	   -v /c/Users/veni/Desktop/docker/php56docker/logs:/logs ^
+	   -v /c/Users/veni/Desktop/docker/php56docker/logs:/var/www/logs ^
 veni:php56docker
