@@ -2,7 +2,7 @@
 FROM centos:latest
 MAINTAINER "vinicius" <viniciusferreirawk@gmail.com>
 
-VOLUME ["/var/www/html","/log"]
+VOLUME ["/var/www/html","/var/log/httpd/"]
 ##
 ## Labels
 ##
